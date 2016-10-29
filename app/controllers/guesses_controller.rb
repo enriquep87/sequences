@@ -7,21 +7,22 @@ def index
   if @first_number.to_i < @second_number.to_i && @second_number.to_i <@third_number.to_i
     @answer="Yes!"
   elsif
-    @answer="No"
+    @answer="No."
   end
 
-  render ("guesses/index.html.erb")
+
 
   g=Guess.new
   g.first_num=params["first_num"]
   g.second_num=params["second_num"]
   g.third_num=params["third_num"]
+  g.results=@answer
   g.save
 
 
   @list=Guess.all
 
-
+  render ("guesses/index.html.erb")
 
 end
 def answer
