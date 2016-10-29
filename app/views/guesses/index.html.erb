@@ -30,18 +30,19 @@ Now it’s your turn. Enter a number sequence in the boxes below, and we’ll te
   <li>
   <%=guess.first_num %>,
   <%=guess.second_num %>,
-  <%=guess.third_num %>
+  <%=guess.third_num %>,
+  <%=guess.results %>
   </li>
 <% end %>
-
-<p>
-  Enter a sequence
-</p>
 
 
 <ul>
   <li><%=@first_number%>,<%=@second_number%>,<%=@third_number%>,<%=@answer%></li>
 </ul>
+
+<p>
+  Enter a sequence
+</p>
 
 <form action="/all_guesses">
   <label for="first"> First number:</label>
@@ -70,7 +71,8 @@ Now it’s your turn. Enter a number sequence in the boxes below, and we’ll te
   </label>
 
   <div>
-  <textarea name="q"id="answer"placeholder="Enter your answer">
+  <textarea name="q" id="answer"placeholder="Enter your answer">
+
   </textarea>
   </div>
 <button>
