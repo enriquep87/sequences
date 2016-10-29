@@ -26,9 +26,18 @@ We’ll start by telling you that the sequence 2, 4, 8 obeys the rule:
 Now it’s your turn. Enter a number sequence in the boxes below, and we’ll tell you whether it satisfies the rule or not. You can test as many sequences as you want.
 </p>
 
+<% @list.each do |guess| %>
+  <li>
+  <%=guess.first_num %>,
+  <%=guess.second_num %>,
+  <%=guess.third_num %>
+  </li>
+<% end %>
+
 <p>
   Enter a sequence
 </p>
+
 
 <ul>
   <li><%=@first_number%>,<%=@second_number%>,<%=@third_number%>,<%=@answer%></li>
